@@ -1,4 +1,4 @@
-const API_URL = "http://backend:5000";
+const API_URL = 'http://api-valenti:5000';
 
 const loadMesas = () => {
   fetch(`${API_URL}/mesas`)
