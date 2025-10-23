@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD Mesas - Montserrat Valenti</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    input {
+      padding: 10px;
+      margin: 5px 0;
+      width: calc(50% - 12px);
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin: 5px 5px 5px 0;
+      border: none;
+      border-radius: 5px;
+      background-color: #3498db;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #ecf0f1;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn-group button {
+      margin-left: 5px;
+      background-color: #e74c3c;
+    }
+
+    .btn-group button.update {
+      background-color: #f1c40f;
+    }
+
+    .btn-group button:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <h1>CRUD Mesas - Montserrat Valenti</h1>
+  <div class="container">
+    <h2>Agregar Mesa</h2>
+    <input id="nombre" placeholder="Nombre">
+    <input id="capacidad" type="number" placeholder="Capacidad">
+    <button id="addMesa">Agregar</button>
+
+    <h2>Mesas</h2>
+    <ul id="mesasList"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

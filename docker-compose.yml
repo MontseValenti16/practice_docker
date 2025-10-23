@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql:8
+    container_name: mysql-valenti
+    environment:
+      MYSQL_ROOT_PASSWORD: montsevale
+      MYSQL_DATABASE: montse_db
+      MYSQL_USER: montse
+      MYSQL_PASSWORD: montse16
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app-network
+
+  backend:
+    build: ./back
+    container_name: api-valenti
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./Back/.env
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  frontend:
+    build: ./Front
+    container_name: front-valenti
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+volumes:
+  db_data:
+
+networks:
+  app-network:
