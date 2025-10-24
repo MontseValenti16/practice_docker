@@ -1,5 +1,5 @@
 // Cambiar nombre del servicio Docker por IP pública
-const API_URL = 'http://34.230.30.32:5000';
+const API_URL = 'http://54.167.5.5:5000';
 
 // Función para cargar todas las mesas
 const loadMesas = async () => {
